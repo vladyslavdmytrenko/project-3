@@ -1,0 +1,38 @@
+.form {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 3;
+}
+
+.form__input {
+  padding: 5px;
+  border: none;
+  border-top: solid 1px var(--color-4);
+  background-color: var(--color-2);
+  color: var(--color-4);
+  font-size: 1rem;
+  flex-grow: 2;
+}
+
+.form__input:focus {
+  outline: #3a7f92;
+}
+
+.form__btn {
+  flex-grow: 1;
+  border: none;
+  border-top: solid 1px var(--color-4);
+  background-color: var(--color-2);
+  color: var(--color-5);
+  font-size: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.form__btn:hover {
+  cursor: pointer;
+}
+
+.form__btn:disabled {
+  cursor: not-allowed;
+  color: var(--color-4);
+}
