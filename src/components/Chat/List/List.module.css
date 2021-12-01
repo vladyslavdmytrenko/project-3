@@ -1,0 +1,47 @@
+.massage_list {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 3;
+  height: 400px;
+  max-height: 400px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.message {
+  margin: 5px;
+  padding: 10px;
+  background-color: var(--color-2);
+}
+
+.user {
+  align-self: flex-end;
+  animation: ariseMessageUser 0.3s cubic-bezier(0.15, 0.04, 0.47, 1.35);
+}
+
+.other {
+  align-self: flex-start;
+  animation: ariseMessageOther 0.3s cubic-bezier(0.15, 0.04, 0.47, 1.35);
+}
+
+@keyframes ariseMessageUser {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX();
+  }
+}
+
+@keyframes ariseMessageOther {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX();
+  }
+}
